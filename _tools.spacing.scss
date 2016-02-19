@@ -1,0 +1,24 @@
+//
+// REVOLT!
+// TOOLS.SPACING
+//
+// Helper functions to extract spacing values out of $revo-spacers map.
+//
+
+
+
+@function spacer($direction, $size, $spacers: $revo-spacers) {
+    @return map-get(map-get($spacers, $size), $direction);
+}
+
+
+
+@function spacer-x($size, $spacers: $revo-spacers) {
+    @return spacer(x, $size, $spacers);
+}
+
+
+
+@function spacer-y($size, $spacers: $revo-spacers) {
+    @return spacer(y, $size, $spacers);
+}
